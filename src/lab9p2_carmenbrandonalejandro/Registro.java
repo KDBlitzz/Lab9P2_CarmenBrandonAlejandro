@@ -9,7 +9,7 @@ package lab9p2_carmenbrandonalejandro;
  * @author diego
  */
 public class Registro {
-    private String ID,orderID,orderDate,shipDate,shipMode,customerID,customerName,segment,country,city,state,postalCode,region,productID,category,subCategory,productName,sales,quantity,discount,profit;
+    protected String ID,orderID,orderDate,shipDate,shipMode,customerID,customerName,segment,country,city,state,postalCode,region,productID,category,subCategory,productName,sales,quantity,discount,profit;
 
     public Registro() {
     }
