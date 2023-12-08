@@ -12,6 +12,7 @@ public class Registro {
     protected String ID,orderID,orderDate,shipDate,shipMode,customerID,customerName,segment,country,city,state,postalCode,region,productID,category,subCategory,productName,sales,quantity,discount,profit;
 
     public Registro() {
+        super();
     }
 
     public Registro(String ID, String orderID, String orderDate, String shipDate, String shipMode, String customerID, String customerName, String segment, String country, String city, String state, String postalCode, String region, String productID, String category, String subCategory, String productName, String sales, String quantity, String discount, String profit) {

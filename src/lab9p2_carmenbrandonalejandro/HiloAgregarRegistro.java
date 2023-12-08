@@ -4,6 +4,7 @@
  */
 package lab9p2_carmenbrandonalejandro;
 
+import java.awt.Color;
 import javax.swing.JProgressBar;
 
 /**
@@ -38,19 +39,21 @@ public class HiloAgregarRegistro extends Thread{
     @Override
     public void run() {
 
-        while (isAlive) {
-            progBar.setValue(progBar.getValue() + 1);
-            if (progBar.getValue() == 100000000) {
-                isAlive = false;
-            }
-            //FIN IF
-
+        boolean avanzar = true;
+        while(isAlive){
+            if(avanzar){
+                progBar.setForeground(Color.yellow);
+                progBar.setValue(progBar.getValue()+1);
+                if(progBar.getValue()== 12){
+                    isAlive=false;
+                }                
+            } //FIN IF
+            
             try {
-                Thread.sleep(0);
+                Thread.sleep(500);
             } catch (InterruptedException ex) {
-                
             }
         }
     }
-
+    
 }
