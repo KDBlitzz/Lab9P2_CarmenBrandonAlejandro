@@ -288,14 +288,24 @@ public class Main extends javax.swing.JFrame {
 
         jScrollPane1.setViewportView(jList1);
 
+        btnClear.setBackground(new java.awt.Color(255, 255, 255));
+        btnClear.setForeground(new java.awt.Color(0, 0, 0));
         btnClear.setText("Clear");
 
+        btnOrders.setBackground(new java.awt.Color(0, 153, 51));
+        btnOrders.setForeground(new java.awt.Color(0, 0, 0));
         btnOrders.setText("Orders");
 
+        btnProducts.setBackground(new java.awt.Color(51, 51, 255));
+        btnProducts.setForeground(new java.awt.Color(0, 0, 0));
         btnProducts.setText("Products");
 
+        btnCustomers.setBackground(new java.awt.Color(255, 0, 0));
+        btnCustomers.setForeground(new java.awt.Color(0, 0, 0));
         btnCustomers.setText("Customers");
 
+        btnDetails.setBackground(new java.awt.Color(255, 102, 0));
+        btnDetails.setForeground(new java.awt.Color(0, 0, 0));
         btnDetails.setText("Details");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -339,10 +349,7 @@ public class Main extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null}
+
             },
             new String [] {
                 "Row ID", "Order ID", "Order Date", "Customer ID", "Country", "City", "Product ID", "Sales"
