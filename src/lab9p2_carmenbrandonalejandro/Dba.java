@@ -1,4 +1,4 @@
-package clase20200623;
+package lab9p2_carmenbrandonalejandro;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
