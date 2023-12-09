@@ -59,5 +59,6 @@ public class EliminarRegistro extends Thread {
             }
         }
         JOptionPane.showMessageDialog(null, "Ejecucion terminada con exito");
+        progBar.setValue(0);
     }
 }

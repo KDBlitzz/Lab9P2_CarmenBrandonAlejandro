@@ -11,7 +11,6 @@ import javax.swing.table.DefaultTableModel;
 
 public class Main extends javax.swing.JFrame {
 
-
     public Main() {
         initComponents();
         this.setLocationRelativeTo(null);
@@ -440,8 +439,10 @@ public class Main extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 930, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jProgressBar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -466,22 +467,23 @@ public class Main extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAgregarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAgregarMouseClicked
-        Dba db = new Dba("./Lab9.mdb");
+        Dba db = new Dba("./Lab9.accdb");
         db.conectar();
         try {
 
             db.query.execute("INSERT INTO TenRecord"
-                    + " (Order ID,Order Date, Ship Date, Ship Mode, Customer ID, Customer Name, Segment, Country, City, State, Postal Code, Region, Product ID, Category, Sub-Category, Product Name, Sales, Quantity, Discount, Profit)"
+                    + " (OrderID,OrderDate, ShipDate, ShipMode, CustomerID, CustomerName, Segment, Country, City, State, PostalCode, Region, ProductID, Category, SubCategory, ProductName, Sales, Quantity, Discount, Profit)"
                     + " VALUES ('" + orderID.getText() + "', '" + orderDate.getText() + "', '" + shipDate.getText() + "', '" + shipMode.getText() + "', '" + customerID.getText() + "'"
                     + ", '" + customerName.getText() + "', '" + segment.getText() + "', '" + country.getText() + "', '" + city.getText() + "', '" + state.getText() + "'"
                     + ", '" + postalCode.getText() + "', '" + region.getText() + "', '" + productID.getText() + "', '" + category.getText() + "', '" + subCategory.getText() + "'"
                     + ", '" + productName.getText() + "', '" + sales.getText() + "', '" + quantity.getText() + "', '" + discount.getText() + "', '" + profit.getText() + "')");
             db.commit();
 
-            JOptionPane.showMessageDialog(this, "Registro Agregado");
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
+        AgregarRegistro ar = new AgregarRegistro(jProgressBar1, true, true);
+        ar.start();
         db.desconectar();
         orderID.setText("");
         orderDate.setText("");
@@ -537,7 +539,6 @@ public class Main extends javax.swing.JFrame {
 
         db.desconectar();
 
-        
 
     }//GEN-LAST:event_btnOrdersMouseClicked
 
@@ -669,9 +670,9 @@ public class Main extends javax.swing.JFrame {
         Dba db = new Dba("./Lab9.accdb");
         db.conectar();
         try {
-            db.query.execute("delete from TenRecord d where d = " + (jTable1.getValueAt(jTable1.getSelectedRow(), 0)));
+            db.query.execute("delete from TenRecord where Id = " + (jTable1.getValueAt(jTable1.getSelectedRow(), 0)));
             db.commit();
-            
+
             EliminarRegistro er = new EliminarRegistro(jProgressBar1, true, true);
             er.start();
 

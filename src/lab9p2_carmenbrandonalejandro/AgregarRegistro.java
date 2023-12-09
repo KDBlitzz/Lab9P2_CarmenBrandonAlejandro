@@ -53,7 +53,7 @@ public class AgregarRegistro extends Thread {
         while (isAlive) {
             if (avanzar) {
                 progBar.setForeground(Color.yellow);
-                progBar.setMaximum(10);
+                progBar.setMaximum(12);
                 progBar.setValue(progBar.getValue() + 1);
                 if (progBar.getValue() == 12) {
                     isAlive = false;
@@ -65,6 +65,7 @@ public class AgregarRegistro extends Thread {
             } catch (InterruptedException ex) {
             }
         }
-        JOptionPane.showMessageDialog(null, "Ejecucion terminada con exito");
+        JOptionPane.showMessageDialog(null, "Registro Agregado");
+        progBar.setValue(0);
     }
 }
