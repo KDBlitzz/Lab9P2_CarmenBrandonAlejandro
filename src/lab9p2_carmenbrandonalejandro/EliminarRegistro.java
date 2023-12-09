@@ -5,13 +5,15 @@
 package lab9p2_carmenbrandonalejandro;
 
 import java.awt.Color;
+import javax.swing.JOptionPane;
 import javax.swing.JProgressBar;
 
 /**
  *
  * @author diego
  */
-public class EliminarRegistro extends Thread{
+public class EliminarRegistro extends Thread {
+
     private JProgressBar progBar;
     private boolean isAlive = true;
     private boolean avanzar = true;
@@ -37,23 +39,25 @@ public class EliminarRegistro extends Thread{
     public void setIsAlive(boolean isAlive) {
         this.isAlive = isAlive;
     }
+
     @Override
-    public void run(){
-        
-        while(isAlive){
-            if(avanzar){
+    public void run() {
+
+        while (isAlive) {
+            if (avanzar) {
                 progBar.setForeground(Color.magenta);
                 progBar.setMaximum(10);
-                progBar.setValue(progBar.getValue()+1);
-                if(progBar.getValue() == 10){
-                    isAlive=false;
-                }                
+                progBar.setValue(progBar.getValue() + 1);
+                if (progBar.getValue() == 10) {
+                    isAlive = false;
+                }
             } //FIN IF
-            
+
             try {
                 Thread.sleep(500);
             } catch (InterruptedException ex) {
             }
         }
+        JOptionPane.showMessageDialog(null, "Ejecucion terminada con exito");
     }
 }

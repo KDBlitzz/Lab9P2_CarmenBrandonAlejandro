@@ -5,6 +5,7 @@
 package lab9p2_carmenbrandonalejandro;
 
 import java.awt.Color;
+import javax.swing.JOptionPane;
 import javax.swing.JProgressBar;
 
 /**
@@ -64,5 +65,6 @@ public class AgregarRegistro extends Thread {
             } catch (InterruptedException ex) {
             }
         }
+        JOptionPane.showMessageDialog(null, "Ejecucion terminada con exito");
     }
 }

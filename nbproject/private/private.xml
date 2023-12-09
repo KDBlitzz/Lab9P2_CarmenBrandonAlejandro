@@ -4,16 +4,14 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/D:/Unitec/Classworks/5to%20Periodo/Progra%20II/Lab9P2_CarmenBrandonAlejandro/src/lab9p2_carmenbrandonalejandro/Main.java</file>
-            <file>file:/D:/Unitec/Classworks/5to%20Periodo/Progra%20II/Lab9P2_CarmenBrandonAlejandro/src/lab9p2_carmenbrandonalejandro/HiloAgregarRegistro.java</file>
             <file>file:/D:/Unitec/Classworks/5to%20Periodo/Progra%20II/Lab9P2_CarmenBrandonAlejandro/src/lab9p2_carmenbrandonalejandro/Customers.java</file>
-            <file>file:/D:/Unitec/Classworks/5to%20Periodo/Progra%20II/Lab9P2_CarmenBrandonAlejandro/src/lab9p2_carmenbrandonalejandro/HiloEliminarRegistro.java</file>
-            <file>file:/D:/Unitec/Classworks/5to%20Periodo/Progra%20II/Lab9P2_CarmenBrandonAlejandro/src/lab9p2_carmenbrandonalejandro/Details.java</file>
+            <file>file:/D:/Unitec/Classworks/5to%20Periodo/Progra%20II/Lab9P2_CarmenBrandonAlejandro/src/lab9p2_carmenbrandonalejandro/AgregarRegistro.java</file>
             <file>file:/D:/Unitec/Classworks/5to%20Periodo/Progra%20II/Lab9P2_CarmenBrandonAlejandro/src/lab9p2_carmenbrandonalejandro/HiloListarCustomers.java</file>
             <file>file:/D:/Unitec/Classworks/5to%20Periodo/Progra%20II/Lab9P2_CarmenBrandonAlejandro/src/lab9p2_carmenbrandonalejandro/Registro.java</file>
-            <file>file:/D:/Unitec/Classworks/5to%20Periodo/Progra%20II/Lab9P2_CarmenBrandonAlejandro/src/lab9p2_carmenbrandonalejandro/Orders.java</file>
             <file>file:/D:/Unitec/Classworks/5to%20Periodo/Progra%20II/Lab9P2_CarmenBrandonAlejandro/src/lab9p2_carmenbrandonalejandro/HiloListarProducts.java</file>
             <file>file:/D:/Unitec/Classworks/5to%20Periodo/Progra%20II/Lab9P2_CarmenBrandonAlejandro/src/lab9p2_carmenbrandonalejandro/HiloListarDetails.java</file>
-            <file>file:/D:/Unitec/Classworks/5to%20Periodo/Progra%20II/Lab9P2_CarmenBrandonAlejandro/src/lab9p2_carmenbrandonalejandro/Products.java</file>
+            <file>file:/D:/Unitec/Classworks/5to%20Periodo/Progra%20II/Lab9P2_CarmenBrandonAlejandro/src/lab9p2_carmenbrandonalejandro/EliminarRegistro.java</file>
+            <file>file:/D:/Unitec/Classworks/5to%20Periodo/Progra%20II/Lab9P2_CarmenBrandonAlejandro/src/lab9p2_carmenbrandonalejandro/Dba.java</file>
             <file>file:/D:/Unitec/Classworks/5to%20Periodo/Progra%20II/Lab9P2_CarmenBrandonAlejandro/src/lab9p2_carmenbrandonalejandro/HiloListarOrders.java</file>
         </group>
     </open-files>

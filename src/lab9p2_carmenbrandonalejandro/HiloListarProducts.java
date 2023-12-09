@@ -4,14 +4,16 @@
  */
 package lab9p2_carmenbrandonalejandro;
 
+import javax.swing.JOptionPane;
 import javax.swing.JProgressBar;
 
 /**
  *
  * @author diego
  */
-public class HiloListarProducts extends Thread{
-     private JProgressBar progBar;
+public class HiloListarProducts extends Thread {
+
+    private JProgressBar progBar;
     private boolean isAlive;
 
     public HiloListarProducts(JProgressBar progBar, boolean isAlive) {
@@ -39,17 +41,19 @@ public class HiloListarProducts extends Thread{
     public void run() {
 
         while (isAlive) {
+
+            progBar.setMaximum(6);
             progBar.setValue(progBar.getValue() + 1);
-            if (progBar.getValue() == 100000000) {
+            if (progBar.getValue() == 6) {
                 isAlive = false;
             }
-            //FIN IF
 
             try {
-                Thread.sleep(0);
+                Thread.sleep(500);
             } catch (InterruptedException ex) {
-                
             }
         }
+        JOptionPane.showMessageDialog(null, "Ejecucion terminada con exito");
+        progBar.setValue(0);
     }
 }
